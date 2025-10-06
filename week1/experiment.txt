@@ -1,0 +1,109 @@
+=== Experiment Log: Week 1, Day 1 ===
+
+Model: Meta-Llama-3-8B-Instruct.Q4_0.gguf
+Threads: 2
+
+Prompts and Results
+-------------------
+
+1) Prompt: Write a professional email requesting project feedback.
+   - Temp=0.2, Tokens=50:
+     Subject: Project Feedback Request
+     Dear [Manager],
+     I hope you are well. I am writing to request your feedback on the recent deliverables for...
+   ―――
+   - Temp=0.7, Tokens=100:
+     Subject: Request for Project Feedback
+     Hello [Manager Name],
+     I trust you are having a great week. I wanted to follow up on the [Project Name] deliverables...
+   ―――
+   - Temp=1.0, Tokens=150:
+     Subject: Seeking Your Expert Feedback
+     Hi [Manager],
+     I hope everything is going well. I’m excited to share the latest updates on our project...
+   
+2) Prompt: Explain RESTful APIs in simple terms.
+   - Temp=0.2, Tokens=50:
+     RESTful APIs let different software communicate over the internet using standard HTTP methods...
+   ―――
+   - Temp=0.7, Tokens=100:
+     RESTful APIs allow applications to exchange data using simple web requests like GET, POST, PUT, and DELETE...
+   ―――
+   - Temp=1.0, Tokens=100:
+     RESTful APIs are like a set of rules that let computers talk to each other over the web using clear commands...
+   
+3) Prompt: Generate a Java Spring Boot controller template.
+   - Temp=0.2, Tokens=80:
+     ```
+     @RestController
+     @RequestMapping("/api")
+     public class MyController {
+         @GetMapping("/items")
+         public List<Item> getItems() {
+             return service.getAllItems();
+         }
+     }
+     ```
+   ―――
+   - Temp=0.7, Tokens=120:
+     ```
+     @RestController
+     @RequestMapping("/api/v1")
+     public class SampleController {
+         private final SampleService service;
+         public SampleController(SampleService service) {
+             this.service = service;
+         }
+         @PostMapping("/create")
+         public ResponseEntity<Sample> createSample(@RequestBody Sample sample) {
+             Sample saved = service.save(sample);
+             return ResponseEntity.status(HttpStatus.CREATED).body(saved);
+         }
+     }
+     ```
+   ―――
+   - Temp=1.0, Tokens=150:
+     ```
+     @RestController
+     @RequestMapping("/v1/samples")
+     public class SampleController {
+         @Autowired
+         private SampleService service;
+         @PutMapping("/{id}")
+         public ResponseEntity<Sample> updateSample(@PathVariable Long id, @RequestBody Sample sample) {
+             Sample updated = service.update(id, sample);
+             return ResponseEntity.ok(updated);
+         }
+     }
+     ```
+
+4) Prompt: Tell a short story about an AI assistant learning to code.
+   - Temp=0.2, Tokens=80:
+     The AI assistant watched countless tutorials and practiced writing small scripts. Over time, it mastered loops and functions.
+   ―――
+   - Temp=0.7, Tokens=100:
+     Once a curious AI assistant began its journey into coding. It learned Python basics, debugged errors, and celebrated its first “Hello, World!”...
+   ―――
+   - Temp=1.0, Tokens=120:
+     In a quiet digital lab, an AI assistant named Nova discovered the art of code. It danced through syntax errors and crafted elegant algorithms...
+   
+5) Prompt: Write a short poem about love.
+   - Temp=0.2, Tokens=50:
+     Love is a gentle breeze at dawn,
+     A spark that lingers when night is gone.
+   ―――
+   - Temp=0.7, Tokens=60:
+     Love blooms in whispered sighs,
+     In sunset dreams and starry skies.
+   ―――
+   - Temp=1.0, Tokens=70:
+     Hearts entwined beneath the moonlight,
+     Souls alight in endless flight.
+
+Insights
+--------
+- **Lower temperature (0.2):** Precise, focused, but sometimes terse.  
+- **Medium temperature (0.7):** Balanced creativity and coherence.  
+- **High temperature (1.0):** More imaginative but can wander off-topic.  
+- **Token limit:** Longer tokens allow fuller responses but risk verbosity.  
+- **Quantized local model:** Fast startup, private, and cost-free.
