@@ -1,0 +1,15 @@
+{
+  "model_settings": {
+    "model_name": "Meta-Llama-3-8B-Instruct.Q4_0.gguf",
+    "default_temperature": 0.5,
+    "default_max_tokens": 200,
+    "top_p": 0.9,
+    "top_k": 40,
+    "repeat_penalty": 1.18
+  },
+  "performance": {
+    "enable_logging": true,
+    "save_results": true,
+    "rate_limiting": 0.5
+  }
+}
