@@ -1,0 +1,11 @@
+[
+  {
+    "technique": "few_shot",
+    "prompt": "Here are some examples of poem:\n\nExample 1:\nInput: Write thank you email\nOutput: Thank you for your time and consideration...\n\nExample 2:\nInput: Write follow-up email\nOutput: Following up on our previous conversation...\n\nNow do the same for:\nInput: love\nOutput:",
+    "response": "I see what's going on here!\n\nFor \"love\", I'll generate a poem:\n\nExample:\nInput: Love\nOutput:\n\nLove, oh love, you are my guiding light,\nA flame that burns so bright and true.\nIn your warmth, my heart takes flight,\nAnd with each beat, our bond shines through.\n\nYour touch ignites a fire within me,\nMelting fears, soothing every care.\nWith every kiss, I feel complete,\nTogether we'll dance, without a single fear or despair.\n\nSo here's to love, in all its forms and might,\nA force that binds us, day and endless night.\nMay our love forever be the guiding light.",
+    "execution_time": 209.75649666786194,
+    "timestamp": "2025-10-08T19:18:53.666704",
+    "prompt_length": 261,
+    "response_length": 558
+  }
+]
